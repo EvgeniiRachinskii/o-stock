@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
+        <module name="authentication-mock" />
+        <module name="api-gateway" />
+        <module name="organization-service" />
+        <module name="registration-service" />
+        <module name="license-service" />
+        <module name="discovery-service" />
+        <module name="testService" />
+        <module name="employee-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-gateway" target="17" />
+      <module name="authentication-mock" target="17" />
+      <module name="config-server" target="17" />
+      <module name="discovery-service" target="17" />
+      <module name="employee-service" target="17" />
+      <module name="license-serivce" target="17" />
+      <module name="license-service" target="17" />
+      <module name="organization-service" target="17" />
+      <module name="registration-service" target="17" />
+      <module name="testService" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
+      <module name="authentication-mock" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="discovery-service" options="-parameters" />
+      <module name="employee-service" options="-parameters" />
+      <module name="license-service" options="-parameters" />
+      <module name="organization-service" options="-parameters" />
+      <module name="registration-service" options="-parameters" />
+      <module name="testService" options="-parameters" />
+    </option>
+  </component>
+</project>

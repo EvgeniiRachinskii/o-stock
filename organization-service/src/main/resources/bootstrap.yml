@@ -1,0 +1,11 @@
+resilience4j.circuitbreaker:
+  instances:
+    organizationService:
+      registerHealthIndicator: true
+      ringBufferSizeInClosedState: 3
+      ringBufferSizeInHalfOpenState: 3
+      waitDurationInOpenState: 10s
+      failureRateThreshold: 50
+eureka:
+  instance:
+    preferIpAddress: true

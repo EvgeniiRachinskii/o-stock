@@ -1,0 +1,60 @@
+#spring:
+#  application:
+#    name: license-service
+#  profiles:
+#    active: dev
+#
+##  cloud:
+##    config:
+##      uri: http://localhost:8071
+#eureka:
+#  instance:
+#    preferIpAddress: true
+#resilience4j.circuitbreaker:
+#  instances:
+#    licenseService:
+#      registerHealthIndicator: true
+#      ringBufferSizeInClosedState: 3
+#      ringBufferSizeInHalfOpenState: 3
+#      waitDurationInOpenState: 10s
+#      failureRateThreshold: 50
+#      recordExceptions:
+#        - org.springframework.web.client.HttpServerErrorException
+#        - java.io.IOException
+#        - java.util.concurrent.TimeoutException
+#        - org.springframework.web.client.ResourceAccessException
+#
+#    #semaphore
+#    #resilience4j.bulkhead:
+#    #  instances:
+#    #    bulkheadLicenseService:
+#    #      maxWaitDuration: 10ms
+#    #      maxConcurrentCalls: 20
+#
+#    #thraed divided
+#    #Формула вычисления пула потоков
+#    #пиковое количество запросов в секунду, когда служба исправна × 99-й процентиль задержки в секундах)
+#    #+ небольшое количество дополнительных
+##потоков для учета накладных расходов
+#resilience4j.thread-pool-bulkhead:
+#  instances:
+#  bulkheadLicenseService:
+#  maxThreadPoolSize: 3
+#  coreThreadPoolSize: 3
+#  queueCapacity: 3
+#  keepAliveDuration: 20ms
+#
+#resilience4j.retry:
+#  instances:
+#  retryLicenseService:
+#  maxRetryAttempts: 5
+#  waitDuration: 10000
+#  retry-exceptions:
+#    - java.util.concurrent.TimeoutException
+#    -
+#resilience4j.ratelimiter:
+#  instances:
+#    licenseService:
+#      timeoutDuration: 1000ms
+#      limitRefreshPeriod: 5000
+#      limitForPeriod: 5

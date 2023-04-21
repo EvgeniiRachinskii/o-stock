@@ -1,0 +1,13 @@
+#spring:
+#  application:
+#    name: config-server
+#    profiles: git
+#
+#    cloud:
+#      config:
+#        server:
+#          git:
+#            uri: https://github.com/EvgeniiRachinskii/licenseconfig-server
+#            searchPaths: application.properties
+#server:
+#  port: 8071
