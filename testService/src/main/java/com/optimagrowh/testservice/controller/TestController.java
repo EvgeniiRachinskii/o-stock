@@ -16,6 +16,6 @@ public class TestController {
 
     @PostMapping
     public String testMethodTheSecond() {
-        return "String";
+        return "String2";
     }
 }
