@@ -13,4 +13,9 @@ public class TestController {
     public String testMethod() {
         return "String";
     }
+
+    @PostMapping
+    public String testMethodTheSecond() {
+        return "String";
+    }
 }
