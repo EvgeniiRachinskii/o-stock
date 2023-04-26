@@ -13,4 +13,8 @@ public class TestController {
     public String testMethod() {
         return "String";
     }
+    @PostMapping
+    public String testinko() {
+        return "strink";
+    }
 }
